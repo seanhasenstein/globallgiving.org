@@ -11,8 +11,4 @@ export default function Home() {
   );
 }
 
-const HomeStyles = styled.div`
-  h1 {
-    color: red;
-  }
-`;
+const HomeStyles = styled.div``;

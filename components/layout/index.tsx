@@ -1,5 +1,8 @@
-import Head from 'next/head';
 import React from 'react';
+import Head from 'next/head';
+import styled from 'styled-components';
+import Header from './Header';
+import Footer from './Footer';
 
 interface Props {
   children: React.ReactNode;
@@ -8,7 +11,7 @@ interface Props {
 
 export default function Layout(props: Props) {
   return (
-    <>
+    <LayoutStyles>
       <Head>
         <title>{`${
           props.title ? `${props.title} | ` : ''
@@ -17,9 +20,18 @@ export default function Layout(props: Props) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header />
-      <main>{props.children}</main>
-      <footer />
-    </>
+      <div>
+        <Header />
+        <main>{props.children}</main>
+      </div>
+      <Footer />
+    </LayoutStyles>
   );
 }
+
+const LayoutStyles = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;

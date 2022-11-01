@@ -8,6 +8,7 @@ body {
   background-color: #F9FAFB;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+  height: 100%;
 }
 
 * {
@@ -15,6 +16,10 @@ body {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   outline-color: #4338ca;
+}
+
+#__next {
+  height: 100%;
 }
 
 a {
